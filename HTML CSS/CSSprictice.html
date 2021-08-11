@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color:cornflowerblue;
+        }                                              /*a指元素，所以没有#*/
+        body{
+            background-image: url("css.jpg");
+        }                                              /*body指元素，所以没有#*/
+        h1{
+            color:red;
+            text-align:center;
+        }                                              /*h1指元素，所以没有#*/
+
+/*段落的定义*/
+        p{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+            text-indent: 50px;
+            font-weight: bold;
+        }                                              /*p指元素，所以没有#*/
+        p.data{text-align:right}
+        p.main{text-align: justify;}
+
+        div{
+            
+            font-size:x-large;
+        }
+
+/*有序列表、无需列表*/
+        ol.a{
+            list-style-type: circle; /*圆*/
+        }
+        ol.b{
+            list-style-type:disc; /*黑点*/
+        }
+        ul.a{
+            list-style-type: lower-roman; /*小写罗马*/
+        }
+        ul.b{
+            list-style-type:upper-alpha /*大写ABCD*/
+        }
+/*表格*/
+table.a{
+            background-color: rgb(247, 245, 242);
+            color: #161616; 
+            border: cadetblue;
+            border-style: outset;
+            border-width: 10px;   /*边框宽度要和边框风格配合使用，单个不起作用*/
+            /* border-collapse: collapse; */
+        }
+        th{
+            background-color: darkturquoise;
+            color: white;
+        }                                          /*th指元素，所以没有#*/
+        td.a{
+            background-color: aqua;
+        }                                          /*td表示td专用 的选择器*/
+        td.b{
+            background-color: blueviolet;
+        }
+        td.c{
+            background-color: chocolate;
+        }
+        td.d{
+            background-color: darkgreen;
+        }
+        td.e{
+            background-color: white;
+        }
+        #part{
+            text-align:left;
+        }
+/*边框*/
+        div.a{
+            width: 300px;
+            margin: 25px; background-color: #FFD700;
+            border: 25px solid green; 
+            padding: 5px; 
+        }
+    </style>
+</head>
+<!--==================================================================================================================-->
+<!--==================================================================================================================-->
+<!--==================================================================================================================-->
+<body>
+    <h1>CSS实例！</h1>
+    <p class="data">2021年8月2日</p>
+    <table border="1">
+        <tr>
+            <td>
+                <p class="main">当我年轻的时候，我梦想改变这个世界；
+                    当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；
+                    当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。
+                    当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；
+                    在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。</p>      
+            </td>
+    </tr>
+    </table>
+
+<br>
+<!--链接-->
+<hr>
+    <br>
+    <center>
+    <a href="https://www.runoob.com" target="_blank">菜鸟教程</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="http://www.ccopyright.com.cn" target="_blank">中国版权保护中心</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="http://www.alphacoding.cn" target="_blank">阿尔法编程平台</a><br>
+    </center>
+
+<br>
+<!--文本域-->
+<hr>
+    <div>
+        <textarea name="discribe" id="dcb" cols="150" rows="10">请谈谈你对CSS的认识:</textarea><br>
+    </div>
+
+<br>
+<!--表格、有序列表、无序列表-->
+<hr>
+    <table border="1px" width="70" height="210">
+        <tr><td>
+            <ol class="a">
+                <li>苹果</li>
+                <li>香蕉</li>
+                <li>葡萄</li>
+            </ol></td>
+            <td><center>
+                <img src="tree.png" width="80.25" height="120">
+            </center></td>
+        </tr>
+
+        <tr>
+            <td><center>
+                <img src="喝可乐.gif" width="80.25" height="120">
+            </center></td>
+            <td>
+            <ol class="b">
+                <li>bus</li>
+                <li>plane</li>
+                <li>ship</li>
+            </ol></td>
+        </tr>
+
+        <tr><td>
+            <ul class="a"> 
+                <li>苹果</li>
+                <li>香蕉</li>
+                <li>葡萄</li>
+            </ul>
+        </td>
+        <td>
+            <ul class="b">
+                <li>bus</li>
+                <li>plane</li>
+                <li>ship</li>
+            </ul>
+        </tr></td>
+    </table> 
+<br>
+<!--表格-->
+<hr>
+<table class="a" border="10px" cellspacing="0" cellpadding="10px"
+    width="800px" frame="box">
+        <caption>个人简历</caption>
+        <thead>
+            <tr>
+                <td class="a" width="130px">姓名：</td>
+                <td class="b" width="130px">王朝阳</td>
+                <td class="a" width="130px">籍贯：</td>
+                <td class="b" width="130px">山西</td>
+                <td class="e" cellpadding="5" rowspan="5"><center>照片</center></td>
+            </tr>
+            <tr>
+                <td class="d" width="135px">出生日期：</td>
+                <td class="c" width="135px">0000.00.00</td>
+                <td class="d" width="135px">政治面貌：</td>
+                <td class="c" width="135px">共青团员</td>
+            </tr>
+            <tr>
+                <td class="a" width="135px">性别：</td>
+                <td class="b" width="135px">男</td>
+                <td class="a" width="135px">民族：</td>
+                <td class="b" width="135px">汉族</td>
+            </tr>
+            <tr>
+                <td class="d" width="135px">学位：</td>
+                <td class="c" width="135px">学士学位</td>
+                <td class="d" width="135px">移动电话：</td>
+                <td class="c" width="13px">12345678123</td>
+            </tr>
+            <tr>
+                <td class="a" width="135px">专业：</td>
+                <td class="b" width="135px">软件工程</td>
+                <td class="a" width="135px">电子邮件：</td>
+                <td class="b" width="135px">1234567@qq.com</td>
+            </tr>
+            <tr>
+                <td class="d" width="135px">地址：</td>
+                <td colspan="5">山西省晋中市太谷区山西农业大学</td>
+            </tr>
+            <tr>
+                <td class="a" rowspan="4">教育背景：</td>
+            </tr>
+            <tr>
+                <td colspan="7">应县第一小学</td>
+            </tr>
+            <tr>
+                <td colspan="7">应县第一中学</td>
+            </tr>
+            <tr>
+                <td colspan="7">应县第一中学</td>
+            </tr>
+            <tr>
+                <td class="d" rowspan="4">所获荣誉：</td>
+            </tr>
+            <tr>
+                <td colspan="7">#########</td>
+            </tr>
+            <tr>
+                <td colspan="7">#########</td>
+            </tr>
+            <tr>
+                <td colspan="7">#########</td>
+            </tr>
+            <tr>
+                <td class="a" rowspan="5">个人介绍:</td>
+            </tr>
+            <tr>
+                <td colspan="7">#####</td>
+            </tr>
+            <tr>
+                <td colspan="7">#####</td>
+            </tr>
+            <tr>
+                <td colspan="7">#####</td>
+            </tr>
+        </thead>
+        </table>
+
+        <br>
+<!--打印空格-->
+<hr>
+        <table border="1">
+            <tr><td>&nbsp前面一个空格</td></tr>
+            <tr><td>&nbsp&nbsp前面两个空格</td></tr>
+            <tr><td>&nbsp&nbsp&nbsp前面三个空格</td></tr>
+            <tr><td>&nbsp&nbsp&nbsp&nbsp&nbsp前面五个空格</td></tr>
+            <tr><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp前面八个空格</td></tr>
+            <tr><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp前面十个空格</td></tr>   
+        </table>
+
+<br>
+<!--块-->
+<hr>
+<div id="container" style="width:1000px，height:800px;">
+
+    <div id="header" style="background-color:#FFA500;">
+    <h1 style="margin-bottom:0;">网站布局</h1></div>
+    
+    <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+        <center>
+            <td><img src="喝可乐.gif" width="80.25" height="90"></td>
+            <td><img src="喝可乐.gif" width="80.25" height="90"></td>
+        </center>
+        </div>
+    
+    <div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+        <iframe src="https://cn.bing.com/" name="iframe_a" width="1142px" height="200px"></iframe>
+        <p><a href="http://www.runoob.com" target="iframe_a">runoob.com</a></p>
+    </div>
+    
+    <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+        以上嵌入为HTML 框架
+    </div>
+
+<hr>
+<!--id选择器、类选择器-->
+<!--id选择器在CSS中以“#”的形式，而类选择器在CSS中以"."的形式.具体见9--16行-->
+    <p id="part">这里应用了id选择器</p>
+    <p class="data">这里应用class选择器</p>
+
+<hr>
+<!--边框-->
+    <div class="a">这是一个边框实例，类在head中</div>
+</body>
+</html>
+<!--
+注：1.选择器有：id选择器、类选择器、分组选择器、嵌套选择器。
+
+
+-->
